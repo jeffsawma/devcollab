@@ -9,7 +9,7 @@ export class SocketService {
   socket: Socket;
 
   constructor() {
-    this.socket = io('http://localhost:5000');
+    this.socket = io('https://devcollab-e6ac.onrender.com');
 
     this.socket.on('connect', () => {
       console.log('Connected to socket server');
