@@ -1,0 +1,33 @@
+<h1>Milestones</h1>
+
+<input type="text" placeholder="Workspace ID" [(ngModel)]="projectId" />
+
+<br /><br />
+
+<button (click)="loadTasks()">Load Milestones</button>
+
+<hr />
+
+<input type="text" placeholder="Milestone title" [(ngModel)]="title" />
+
+<br /><br />
+
+<textarea placeholder="Description" [(ngModel)]="description"></textarea>
+
+<br /><br />
+
+<button (click)="createTask()">Create Milestone</button>
+
+<hr />
+
+<div *ngFor="let task of tasks">
+  <h3>{{ task.title }}</h3>
+
+  <p>{{ task.description }}</p>
+
+  <p>Progress: {{ task.status }}</p>
+
+  <button (click)="deleteTask(task._id)">Delete</button>
+
+  <hr />
+</div>

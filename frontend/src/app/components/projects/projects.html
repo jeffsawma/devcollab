@@ -1,0 +1,25 @@
+<h1>Workspaces</h1>
+
+<input type="text" placeholder="Workspace title" [(ngModel)]="title" />
+
+<br /><br />
+
+<textarea placeholder="Workspace description" [(ngModel)]="description"></textarea>
+
+<br /><br />
+
+<button (click)="createProject()">Create Workspace</button>
+
+<hr />
+
+<div *ngFor="let project of projects">
+  <h3>{{ project.title }}</h3>
+
+  <p>{{ project.description }}</p>
+
+  <p>ID: {{ project._id }}</p>
+
+  <button (click)="deleteProject(project._id)">Delete</button>
+
+  <hr />
+</div>
