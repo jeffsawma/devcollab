@@ -96,8 +96,9 @@ cd devcollab
 
 # Backend Setup
 
+From the repository root:
+
 ```bash
-cd backend
 npm install
 npm start
 ```
